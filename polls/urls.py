@@ -4,5 +4,7 @@ from . import views
 # Added two urls to the polls app for routing.
 urlpatterns = [
     path('', views.index, name='index'),
-    path('test/', views.test, name='test')
+    path('<int:question_id>/', views.detail, name='detail'),
+    path('<int:question_id>/results/', views.results, name='results'),
+    path('<int:question_id>/vote/', views.vote, name='vote')
 ]

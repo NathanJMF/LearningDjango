@@ -2,6 +2,7 @@ from django.urls import path
 from . import views
 
 # Added two urls to the polls app for routing.
+app_name = 'polls'
 urlpatterns = [
     path('', views.index, name='index'),
     path('<int:question_id>/', views.detail, name='detail'),
